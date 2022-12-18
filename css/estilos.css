@@ -71,6 +71,35 @@ body{
         transform:translateX(0);
     }
 }
+
+.btn{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1rem 5rem;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+@media(min-width:768px){
+    .btn{
+        font-size: 2.2rem;
+    }
+
+}
+.bordes{
+    border: 3px solid var(--blanco);
+}
+@media(min-width:768px){
+    .bordes{
+        border: 4px solid var(--blanco);
+    }
+
+}
+.bordes:hover{
+    color: var(--verde);
+    background-color: var(--blanco);
+}
 /*Encabezado*/
 .contenedor-navegacion{
     background-color: var(--oscuro);
@@ -136,6 +165,40 @@ body{
 }
 
 /*Video*/
+.contenido-header{
+    position: relative;
+}
+.contenido-header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+}
+.texto-encabezado{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.texto-encabezado h2{
+    color: var(--blanco);
+    font-size: 4rem;
+}
+
+@media(min-width:768px){
+    .texto-encabezado h2{
+        font-size: 8rem;
+    }
+
+}
+
 video{
     width: 100%;
     height: 100%;
